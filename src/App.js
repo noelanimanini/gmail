@@ -64,6 +64,11 @@ function App() {
   const handleLogin = (e) => {
     if (e.target.name === "email") {
       setEmail(e.target.value);
+      console.log(e.target.value);
+      dispatch({
+        type: "SET_EMAIL",
+        email: e.target.value,
+      });
     } else if (e.target.name === "password") {
       setPassword(e.target.value);
     }

@@ -15,5 +15,7 @@ export const reducer = (state = initialState, action) => {
         ...state,
         password: action.value,
       };
+    default:
+      return state;
   }
 };

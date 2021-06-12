@@ -24,10 +24,11 @@ const answers = [];
 // const personal = [];
 function Gmail({ email }) {
   const [form, setForm] = useState("");
+  const user = useSelector((state) => state.email);
 
   for (let ele in db) {
     if (ele === email) {
-      let result = db[ele].map((ele) => <div>{ele.to}</div>);
+      return <div>{user}</div>;
     }
   }
 
